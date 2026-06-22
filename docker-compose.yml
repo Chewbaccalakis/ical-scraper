@@ -1,6 +1,9 @@
 services:
   uac-ical:
-    build: .
+    image: ghcr.io/chewbaccalakis/unionartscenter-ical:latest
+    # To build locally instead of pulling the published image, comment out the
+    # image line above and uncomment the next line:
+    # build: .
     restart: unless-stopped
     ports:
       - "${HOST_PORT:-3000}:3000"
